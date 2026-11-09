@@ -8,7 +8,7 @@
     "build": "npm run verify && next build",
     "start": "next start",
     "typecheck": "next typegen && tsc --noEmit",
-    "test": "tsx --test lib/content.test.ts",
+    "test": "tsx --test lib/content.test.ts scripts/verify-images.test.ts",
     "verify": "tsx scripts/verify-migration.ts",
     "check": "npm run typecheck && npm test && npm run verify"
   },

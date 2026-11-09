@@ -1,8 +1,9 @@
 import assert from "node:assert/strict";
 import { createHash } from "node:crypto";
-import { existsSync, readFileSync } from "node:fs";
+import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { getAllPosts, getPosts } from "../lib/content";
+import { imageSources, verifyImage } from "./verify-images";
 
 type ManifestPost = {
   slug: string;
@@ -76,17 +77,10 @@ function verifyFiles(): void {
       post.image,
       post.socialImage,
       ...post.authors.map((author) => author.image),
-      ...[...post.body.matchAll(/!\[[^\]]*\]\(([^\s)]+)/g)].map((match) => match[1]),
-      ...elements(post.body, "img").map((image) => image.src),
+      ...imageSources(post.body),
     ];
     for (const image of images) {
-      if (!image || /^(https?:|data:)/.test(image)) continue;
-      assert(image.startsWith("/blog/"), `${post.slug}: local image must use /blog/: ${image}`);
-      const pathname = decodeURIComponent(new URL(image, manifest.canonicalOrigin).pathname);
-      assert(
-        existsSync(resolve(root, "public", pathname.slice("/blog/".length))),
-        `${post.slug}: missing current image ${image}`,
-      );
+      verifyImage(image, post.slug, { publicDirectory: resolve(root, "public") });
     }
   }
 
@@ -300,6 +294,7 @@ async function verifyHTTP(input: string): Promise<void> {
           continue;
         if (tag === "script" && value.startsWith("/"))
           assert(value.startsWith("/blog/"), `${path}: script asset escaped basePath`);
+        if (tag === "img") verifyImage(value, path, { origin });
         const url = localBlogURL(value, path);
         if (url) resources.add(url.pathname + url.search);
       }
