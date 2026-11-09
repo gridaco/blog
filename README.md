@@ -16,7 +16,7 @@ npm run dev
 Open [localhost:3002/blog](http://localhost:3002/blog).
 
 ```sh
-# Validate content, links, TypeScript, and tests
+# Validate content, image paths, TypeScript, and tests
 npm run check
 
 # Build the standalone Next.js application
@@ -37,7 +37,7 @@ The Vercel blog project connects to `gridaco/blog`, uses **Next.js**, has no Roo
 
 The application uses `/blog` as its Next.js base path. Canonical URLs, social metadata, feeds, and sitemap entries always use `https://grida.co/blog`, including in previews. The main Grida website proxies `/blog` and its descendants to this application. Compatibility rewrites also accept the stripped paths sent by the previous website proxy.
 
-The blog does not own the `grida.co` domain or the main website's `robots.txt`. The main website advertises the blog sitemap at `https://grida.co/blog/sitemap.xml`.
+The blog does not own the `grida.co` domain or the main website's `robots.txt`. Its robots.txt should advertise the blog sitemap at `https://grida.co/blog/sitemap.xml`.
 
 ```sh
 # Verify production through the main website's proxy

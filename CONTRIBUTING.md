@@ -58,7 +58,7 @@ Without `image`, the article list uses the first image in the article, and socia
 
 ## Preview and publish
 
-Changes on a branch do not change the published blog. Once the Vercel Git integration is connected, open the deployment preview linked from your pull request and visit `/blog` to review it.
+Changes on a branch do not change the published blog. Open the Vercel deployment preview linked from your pull request and visit `/blog` to review it.
 
 `draft: true` excludes an article from every build, including preview pages, article URLs, feeds, and the sitemap. To preview the finished article in your branch, remove that line or set `draft: false`; it still does not change the production blog until the pull request is merged into `main`.
 
