@@ -107,4 +107,4 @@ Read the failed check or deployment log linked from the pull request. Common cau
 
 Keep the opening and closing `---` lines. If a title or description contains a colon, wrap the whole value in quotes. Image filenames are case-sensitive. Fix the file and commit again to the same branch; the checks and preview update automatically.
 
-If you use a local checkout, run `npm run check` and `npm run build` before opening the pull request. Setup commands are in the [README](README.md).
+If you use a local checkout, run `pnpm check` and `pnpm build` before opening the pull request. Application setup and verification details are in [AGENTS.md](AGENTS.md).

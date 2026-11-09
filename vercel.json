@@ -10,5 +10,7 @@
       "source": "/:path((?!blog(?:/|$)).+)",
       "destination": "/blog/:path"
     }
-  ]
+  ],
+  "installCommand": "pnpm install --frozen-lockfile",
+  "buildCommand": "pnpm build"
 }

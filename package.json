@@ -5,12 +5,12 @@
   "type": "module",
   "scripts": {
     "dev": "next dev --port 3002",
-    "build": "npm run verify && next build",
+    "build": "pnpm verify && next build",
     "start": "next start",
     "typecheck": "next typegen && tsc --noEmit",
     "test": "tsx --test lib/content.test.ts scripts/verify-images.test.ts",
     "verify": "tsx scripts/verify-migration.ts",
-    "check": "npm run typecheck && npm test && npm run verify"
+    "check": "pnpm typecheck && pnpm test && pnpm verify"
   },
   "dependencies": {
     "@mdx-js/mdx": "3.1.1",
@@ -34,6 +34,8 @@
     "typescript": "6.0.3"
   },
   "engines": {
-    "node": ">=24 <27"
-  }
+    "node": ">=24 <27",
+    "pnpm": "11.x"
+  },
+  "packageManager": "pnpm@11.5.2"
 }
