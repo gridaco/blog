@@ -1,0 +1,22 @@
+---
+title: Your article title
+description: A short summary of what the reader will learn.
+date: 2026-11-10
+authors: universe
+tags: [canvas]
+draft: true
+---
+
+Write an opening paragraph that tells the reader what this article covers.
+
+## Your first section
+
+Write your article using Markdown. The title above is shown automatically.
+
+<!-- Upload assets to public/images/your-article-slug/ and add an image like this:
+![Describe what the image shows](/blog/images/your-article-slug/example.webp)
+-->
+
+<!-- To preview this article in your pull request, set draft to false.
+It is published to grida.co/blog only after the pull request is merged into main.
+-->

@@ -1,0 +1,39 @@
+{
+  "name": "@grida/blog",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev --port 3002",
+    "build": "npm run verify && next build",
+    "start": "next start",
+    "typecheck": "next typegen && tsc --noEmit",
+    "test": "tsx --test lib/content.test.ts",
+    "verify": "tsx scripts/verify-migration.ts",
+    "check": "npm run typecheck && npm test && npm run verify"
+  },
+  "dependencies": {
+    "@mdx-js/mdx": "3.1.1",
+    "mermaid": "12.3.0",
+    "next": "16.4.5",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "rehype-highlight": "7.0.2",
+    "rehype-slug": "6.0.0",
+    "remark-gfm": "4.0.1",
+    "yaml": "2.9.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "4.3.5",
+    "@types/mdx": "2.0.14",
+    "@types/node": "24.10.0",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.2.3",
+    "tailwindcss": "4.3.5",
+    "tsx": "4.23.15",
+    "typescript": "6.0.3"
+  },
+  "engines": {
+    "node": ">=24 <27"
+  }
+}

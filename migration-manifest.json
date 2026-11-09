@@ -1,0 +1,278 @@
+{
+  "sourceRepository": "https://github.com/gridaco/grida",
+  "sourceCommit": "219f40bcd1579d07b0742f63671875c4939bc0d5",
+  "basePath": "/blog",
+  "canonicalOrigin": "https://grida.co",
+  "posts": [
+    {
+      "slug": "font-italic",
+      "path": "/blog/font-italic",
+      "title": "The Typography Mystery Hidden in Every Design Tool",
+      "description": "Italic isn’t a transform. It’s a font-selection problem—spanning OS/2 flags, STAT metadata, variable axes, and fallbacks.",
+      "date": "2025-09-15",
+      "authors": ["universe"],
+      "tags": ["canvas", "skia", "font", "italic", "typography", "opentype"],
+      "hide_table_of_contents": false,
+      "bodySha256": "8ef124ba7408a1c0471bc4d3f84d9b216929def6a3022b9f8af269dae5fab3db",
+      "headingIds": [
+        "what-you-think-italic-is",
+        "why-italic-gets-complicated-in-modern-font-families",
+        "the-family-taxonomy-how-italic-is-actually-shipped",
+        "a-professional-font-engine-needs-a-policy-not-a-trick",
+        "gridas-italic-selection-pipeline",
+        "priority-order",
+        "the-decision-flow",
+        "from-selection-to-rendering-a-stable-style-model",
+        "fontstylekey",
+        "skia-integration-illustrative",
+        "deep-dive-persistence-portability-and-edge-cases",
+        "persistence-principles",
+        "real-world-pressure-points",
+        "blink-grida-and-skia-where-selection-lives",
+        "real-italic-vs-synthetic-italic",
+        "why-we-built-fontsgridaco",
+        "closing-the-small-button-with-big-consequences"
+      ]
+    },
+    {
+      "slug": "refig",
+      "path": "/blog/refig",
+      "title": "Introducing refig — a headless Figma renderer for real-world pipelines",
+      "description": "Export Figma designs to PNG/SVG/PDF without a browser. Deterministic, CI-friendly rendering from .fig or REST JSON—built for tooling, previews, and automation.",
+      "date": "2026-02-17",
+      "authors": ["universe"],
+      "tags": ["figma", "rendering", "ci", "wasm", "skia", "tooling"],
+      "hide_table_of_contents": false,
+      "bodySha256": "84d282185cf799c953568196ea72edc3e802c612c5167d3eddfaaae04bb4f023",
+      "headingIds": [
+        "what-is-refig",
+        "the-idea-deterministic-rendering-you-can-build-on",
+        "what-refig-intentionally-doesnt-do",
+        "a-tiny-taste-cli",
+        "where-this-is-headed"
+      ]
+    },
+    {
+      "slug": "snap-on-canvas",
+      "path": "/blog/snap-on-canvas",
+      "title": "Snapping feature on Grida Canvas",
+      "description": "Learn how snapping elements works on Grida Canvas",
+      "date": "2025-02-05",
+      "authors": ["ramunarasinga"],
+      "tags": ["canvas", "ux", "surface"],
+      "hide_table_of_contents": false,
+      "bodySha256": "089b05a118d90a99ea466b7267b41e23678d7461da2c9503fc4ab42a11cd22fa",
+      "headingIds": []
+    }
+  ],
+  "authors": {
+    "universe": {
+      "name": "Universe",
+      "title": "Founder@Grida",
+      "url": "https://github.com/softmarshmallow",
+      "image": "/blog/authors/softmarshmallow.png"
+    },
+    "ramunarasinga": {
+      "name": "Ramu Narasinga",
+      "title": "OSS Tinkerer | Software Engineer",
+      "url": "https://github.com/ramu-narasinga",
+      "image": "/blog/authors/ramu-narasinga.png"
+    }
+  },
+  "legacyHtmlRoutes": [
+    "/blog/archive",
+    "/blog/authors",
+    "/blog/font-italic",
+    "/blog",
+    "/blog/markdown-page",
+    "/blog/refig",
+    "/blog/snap-on-canvas",
+    "/blog/tags/canvas",
+    "/blog/tags/ci",
+    "/blog/tags/figma",
+    "/blog/tags/font",
+    "/blog/tags",
+    "/blog/tags/italic",
+    "/blog/tags/opentype",
+    "/blog/tags/rendering",
+    "/blog/tags/skia",
+    "/blog/tags/surface",
+    "/blog/tags/tooling",
+    "/blog/tags/typography",
+    "/blog/tags/ux",
+    "/blog/tags/wasm"
+  ],
+  "feeds": ["/blog/rss.xml", "/blog/atom.xml"],
+  "assets": [
+    {
+      "file": "public/images/font-italic/01-italic-toggle.webp",
+      "path": "/blog/images/font-italic/01-italic-toggle.webp",
+      "legacyPath": "/blog/assets/images/01-italic-toggle-a53124e5777114cbd4cf11c299bbed30.webp",
+      "sha256": "fffacf168ba71c36e9a3f9bcec9ce7d5181cd7d1cdcc67285ab0416f5132654e",
+      "bytes": 50246
+    },
+    {
+      "file": "public/images/font-italic/02-italic-toggle-ui-illusion.png",
+      "path": "/blog/images/font-italic/02-italic-toggle-ui-illusion.png",
+      "legacyPath": "/blog/assets/images/02-italic-toggle-ui-illusion-6253266940cfde28e580a8b56b506c23.png",
+      "sha256": "29c40ab5be33bf51a082ea530a513c00f326fde7681906e219b841aebef69851",
+      "bytes": 136271
+    },
+    {
+      "file": "public/images/font-italic/03-italic-evolution-timeline.png",
+      "path": "/blog/images/font-italic/03-italic-evolution-timeline.png",
+      "legacyPath": "/blog/assets/images/03-italic-evolution-timeline-e3887cd44939d2189ea2e53deb3edfc0.png",
+      "sha256": "3a086868ff8074e9d3bb2c07891cfd8b5d1b03e9f1a2e795c499d1852c2f64ed",
+      "bytes": 141894
+    },
+    {
+      "file": "public/images/font-italic/04-font-family-italic-taxonomy.png",
+      "path": "/blog/images/font-italic/04-font-family-italic-taxonomy.png",
+      "legacyPath": "/blog/assets/images/04-font-family-italic-taxonomy-9a35ab43bead1fac1bb3434d38e4de9a.png",
+      "sha256": "3652ad4300c4ccea3d431e3eebc62005fae5eb788b6fa258d76c6e784a080415",
+      "bytes": 1828765
+    },
+    {
+      "file": "public/images/snap-on-canvas/central-snap-1.png",
+      "path": "/blog/images/snap-on-canvas/central-snap-1.png",
+      "legacyPath": "/blog/assets/images/central-snap-1-69de3574b3e5b1b4513e4b6ae31e125b.png",
+      "sha256": "9085496c9801a3df187feee319856d5e363cbe9ff238951968dc8ff4ecab68c4",
+      "bytes": 311558
+    },
+    {
+      "file": "public/images/snap-on-canvas/central-snap-2.png",
+      "path": "/blog/images/snap-on-canvas/central-snap-2.png",
+      "legacyPath": "/blog/assets/images/central-snap-2-cc82365665b800d3e076ebea095a90a7.png",
+      "sha256": "07b00eca114069d65d35e851a773104cf9c46274fd0a4e2bc85b6751c9ba40f0",
+      "bytes": 318024
+    },
+    {
+      "file": "public/images/snap-on-canvas/central-snap-3.gif",
+      "path": "/blog/images/snap-on-canvas/central-snap-3.gif",
+      "legacyPath": "/blog/assets/images/central-snap-3-97b908baff305831c9c3521521724ab8.gif",
+      "sha256": "fd0ac4150514c3844ab483017ee9b899c30bd313875093850319b62ad37f2e06",
+      "bytes": 779178
+    },
+    {
+      "file": "public/images/snap-on-canvas/horizontal-snap-1.gif",
+      "path": "/blog/images/snap-on-canvas/horizontal-snap-1.gif",
+      "legacyPath": "/blog/assets/images/horizontal-snap-1-47362c394981cfc25d9386d71512022e.gif",
+      "sha256": "3aecb44bdf2b31e30d08f7e450d59af49721745430e09ab5ee6d6a4fb0e20220",
+      "bytes": 367092
+    },
+    {
+      "file": "public/images/snap-on-canvas/horizontal-snap-2.gif",
+      "path": "/blog/images/snap-on-canvas/horizontal-snap-2.gif",
+      "legacyPath": "/blog/assets/images/horizontal-snap-2-6aff92c363dc105202107884a65b484b.gif",
+      "sha256": "03d604f5a1f54d72d51eb4093198b958f6a261d0a425bcb345604cdfbeec4d01",
+      "bytes": 451219
+    },
+    {
+      "file": "public/images/snap-on-canvas/horizontal-snap-3.gif",
+      "path": "/blog/images/snap-on-canvas/horizontal-snap-3.gif",
+      "legacyPath": "/blog/assets/images/horizontal-snap-3-4dbda037ae0039b2f769e72025f0abd9.gif",
+      "sha256": "7d1aa4a937ec90a4f7f2409794fba6766a3603591683fdc83a3bd89bda77a6d2",
+      "bytes": 426967
+    },
+    {
+      "file": "public/images/snap-on-canvas/snap-threshold.png",
+      "path": "/blog/images/snap-on-canvas/snap-threshold.png",
+      "legacyPath": "/blog/assets/images/snap-threshold-dda0647d5be225241e6d77cdd58cad26.png",
+      "sha256": "17f6a1c5102f6df28aeaf0ef64a5c2f584358093c171055c5ae230b2cfc7fd29",
+      "bytes": 48129
+    },
+    {
+      "file": "public/images/snap-on-canvas/vertical-snap-1.gif",
+      "path": "/blog/images/snap-on-canvas/vertical-snap-1.gif",
+      "legacyPath": "/blog/assets/images/vertical-snap-1-2e8034e634887e32ea2f8a7cd6de3694.gif",
+      "sha256": "a85ed77559ed10ac724a140738316dade55b9edf05e6933159e2945b372ae1c4",
+      "bytes": 309643
+    },
+    {
+      "file": "public/images/snap-on-canvas/vertical-snap-2.gif",
+      "path": "/blog/images/snap-on-canvas/vertical-snap-2.gif",
+      "legacyPath": "/blog/assets/images/vertical-snap-2-39de5d93c81848a2e5a1f6b0c0c6b495.gif",
+      "sha256": "7c721eb13c97dddcaf1b8999c44d3a316e2d832b55b1a14af18aca1e2a37ddab",
+      "bytes": 470011
+    },
+    {
+      "file": "public/images/snap-on-canvas/vertical-snap-3.gif",
+      "path": "/blog/images/snap-on-canvas/vertical-snap-3.gif",
+      "legacyPath": "/blog/assets/images/vertical-snap-3-344b0da69c54ae777b920c0b5b827e77.gif",
+      "sha256": "85e862e00388f9be8353d07f218f1674ccce7be37d30e442db4a3e4a03175829",
+      "bytes": 409007
+    },
+    {
+      "file": "public/authors/ramu-narasinga.png",
+      "path": "/blog/authors/ramu-narasinga.png",
+      "sha256": "ce306d3e6742d4851dc295b324d0a2ca70c6203b938c94185e2f8e942545ff2f",
+      "bytes": 441026
+    },
+    {
+      "file": "public/authors/softmarshmallow.png",
+      "path": "/blog/authors/softmarshmallow.png",
+      "sha256": "8e583e6bbf64b3d9b54744bead55fbe6591b72ffb4ebe671566da68cf622e8b3",
+      "bytes": 195757
+    },
+    {
+      "file": "public/img/favicon.ico",
+      "path": "/blog/img/favicon.ico",
+      "sha256": "db06bb34606c1e6134058fae2eff3048138711ebf3e5d9f234b709469db12b76",
+      "bytes": 1183
+    },
+    {
+      "file": "public/img/logo-on-dark.svg",
+      "path": "/blog/img/logo-on-dark.svg",
+      "sha256": "1d1b8675608b99a44d98eb4797965cd2c9e91d1faf66a358d61608ff09b8cbc4",
+      "bytes": 3918
+    },
+    {
+      "file": "public/img/logo.svg",
+      "path": "/blog/img/logo.svg",
+      "sha256": "525b783f0dc7f4ffe1da9b3943cf7580b03e51fea8a17b8bab56d4f31cd12dde",
+      "bytes": 3926
+    },
+    {
+      "file": "public/img/navbar-logo-dark.svg",
+      "path": "/blog/img/navbar-logo-dark.svg",
+      "sha256": "b273c6230ee1c1bd652e4b358117bbed91fc73fc4febabbab63469962e926054",
+      "bytes": 5943
+    },
+    {
+      "file": "public/img/navbar-logo.svg",
+      "path": "/blog/img/navbar-logo.svg",
+      "sha256": "cb24194b138aa922a1c820f548a3c34c1278aa3a61efd698d75e94103a045e04",
+      "bytes": 5943
+    },
+    {
+      "file": "public/img/social-card.png",
+      "path": "/blog/img/social-card.png",
+      "sha256": "230a0bf4e440346d7532e836bffd29aa2e37704027221ed7f95dd6c8779649d6",
+      "bytes": 7317
+    },
+    {
+      "file": "public/rss.css",
+      "path": "/blog/rss.css",
+      "sha256": "bab6fd02f9cb7b6d1cbc49952caa3aa7b489530cde2fcf9d12f095daddc0f2a8",
+      "bytes": 1266
+    },
+    {
+      "file": "public/rss.xsl",
+      "path": "/blog/rss.xsl",
+      "sha256": "29cf31e9c70efb3af3050ae1bd7e7ebb36204d751e26833a270b21435034a336",
+      "bytes": 3274
+    },
+    {
+      "file": "public/atom.css",
+      "path": "/blog/atom.css",
+      "sha256": "bab6fd02f9cb7b6d1cbc49952caa3aa7b489530cde2fcf9d12f095daddc0f2a8",
+      "bytes": 1266
+    },
+    {
+      "file": "public/atom.xsl",
+      "path": "/blog/atom.xsl",
+      "sha256": "69669754c59d5ab5fdcf73f625d4a16d9b458a20cd22bffca40004302eda498e",
+      "bytes": 3411
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "nextjs",
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/blog"
+    },
+    {
+      "source": "/:path((?!blog(?:/|$)).+)",
+      "destination": "/blog/:path"
+    }
+  ]
+}
